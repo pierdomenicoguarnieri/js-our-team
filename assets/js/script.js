@@ -29,4 +29,13 @@ const teamMembers = [
     role: "Graphic designer",
     image: "barbara-ramos.graphic-designer.jpg"
   }
-]
+];
+
+for(let i in teamMembers){
+  const teamMember = teamMembers[i];
+  console.log("<Object>");
+  for(let key in teamMember){
+    console.log(key, ": ", teamMember[key])
+  }
+  console.log("</Object>");
+}
