@@ -27,7 +27,7 @@ const teamMembers = [
   {
     name: "Barbara Ramos",
     role: "Graphic designer",
-    image: "barbara-ramos.graphic-designer.jpg"
+    image: "barbara-ramos-graphic-designer.jpg"
   }
 ];
 
@@ -41,8 +41,14 @@ for(let i in teamMembers){
   const ulGeneral = document.createElement("ul");
   unorderedList.append(ulGeneral)
   for(let key in teamMember){
-    ulGeneral.innerHTML +=`
-    <li>${key}: ${teamMember[key]}</li>
-    `
+    if(key === "image"){
+      ulGeneral.innerHTML +=`
+      <li>${key}: <img src="assets/img/${teamMember[key]}"></li>
+      `
+    }else{
+      ulGeneral.innerHTML +=`
+      <li>${key}: ${teamMember[key]}</li>
+      `
+    }
   }
 }
