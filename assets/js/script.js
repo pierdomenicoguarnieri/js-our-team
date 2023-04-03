@@ -36,13 +36,14 @@ const row = document.querySelector(".row");
 for(let i in teamMembers){
   const teamMember = teamMembers[i];
   const col = document.createElement("div");
-  col.classList.add("col", "bg-white", "mb-5", "px-3", "d-flex", "flex-column");
+  col.classList.add("col", "bg-white", "mb-5", "px-0", "d-flex", "flex-column");
   row.append(col);
   for(let key in teamMember){
     console.log(key)
     switch (key) {
       case "name":
-        const name = document.createElement("h2")
+        const name = document.createElement("h2");
+        name.classList.add("py-2");
         name.innerHTML =`
         ${teamMember[key]}
         `
@@ -50,7 +51,8 @@ for(let i in teamMembers){
         break;
         
       case "role":
-        const role = document.createElement("span")
+        const role = document.createElement("span");
+        role.classList.add("pb-4");
         role.innerHTML =`
         ${teamMember[key]}
         `
@@ -58,7 +60,7 @@ for(let i in teamMembers){
         break;
           
       case "image":
-        const image = document.createElement("img")
+        const image = document.createElement("img");
         image.setAttribute("src", "assets/img/" + teamMember[key]);
         col.append(image);
         break;
