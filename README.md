@@ -59,3 +59,5 @@ Organizzare i singoli membri in card/schede
 2. Stampare usando il temmplate literal le proprietà degli oggetti
 
 ## References
+
+[W3Schools Element setAttribute()](https://www.w3schools.com/jsref/met_element_setattribute.asp)
