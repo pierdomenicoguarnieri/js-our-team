@@ -31,11 +31,18 @@ const teamMembers = [
   }
 ];
 
+const unorderedList = document.querySelector("ul");
+
 for(let i in teamMembers){
   const teamMember = teamMembers[i];
-  console.log("<Object>");
+  unorderedList.innerHTML +=`
+  <li>Object ${parseInt(i)+1}</li>
+  `
+  const ulGeneral = document.createElement("ul");
+  unorderedList.append(ulGeneral)
   for(let key in teamMember){
-    console.log(key, ": ", teamMember[key])
+    ulGeneral.innerHTML +=`
+    <li>${key}: ${teamMember[key]}</li>
+    `
   }
-  console.log("</Object>");
 }
